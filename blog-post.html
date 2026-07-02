@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog SIGTDE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR (igual que la landing) ================= -->
+<header class="navbar con-sombra" id="navbar">
+  <div class="contenedor navbar-interior">
+    <a href="index.html" class="logo">SIGTDE<span class="logo-punto">.</span></a>
+    <nav class="navbar-links links-nav" aria-label="Navegación principal">
+      <a href="index.html#como-funciona">Cómo funciona</a>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#noticias">Noticias</a>
+      <a href="index.html#planes">Planes</a>
+    </nav>
+    <a href="demo.html" class="btn btn-primario btn-sm">Probar el demo</a>
+    <button class="navbar-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMovil">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="navMovil" class="navbar-movil" aria-label="Navegación móvil">
+    <a href="index.html#como-funciona">Cómo funciona</a>
+    <a href="index.html#para-quien">Para quién</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#noticias">Noticias</a>
+    <a href="index.html#planes">Planes</a>
+    <a href="demo.html" class="btn btn-primario btn-sm btn-block" style="margin-top:8px;">Probar el demo</a>
+  </nav>
+</header>
+
+<main style="padding-top:96px;">
+  <article class="seccion" style="padding-top:24px;">
+    <div class="contenedor" style="max-width:760px;">
+      <a href="index.html#blog" class="texto-sm peso-600" style="color:var(--primario);display:inline-flex;align-items:center;gap:6px;">← Volver al blog</a>
+
+      <div style="margin-top:24px;">
+        <span id="catBadge" class="badge badge-azul">Categoría</span>
+        <h1 id="tituloArticulo" style="margin-top:16px;">Título del artículo</h1>
+        <div class="flex gap-12" style="margin-top:14px;align-items:center;">
+          <div class="avatar" style="width:36px;height:36px;font-size:12px;">SG</div>
+          <div>
+            <p class="texto-sm peso-700" style="margin:0;">Equipo SIGTDE</p>
+            <p class="texto-xs texto-muted" id="fechaLectura" style="margin:0;">Fecha · Lectura</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta" style="margin-top:28px;background:var(--bg-alt);border:none;display:flex;align-items:center;justify-content:center;padding:40px;">
+        <svg id="iconoArticulo" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="var(--primario)" stroke-width="1.6"></svg>
+      </div>
+
+      <div id="cuerpoArticulo" style="margin-top:8px;font-size:16px;"></div>
+
+      <div class="aviso-simulado" style="margin-top:32px;">📝 Contenido ilustrativo de la PDC — no constituye asesoría médica ni deportiva profesional.</div>
+
+      <!-- ================= CTA ================= -->
+      <div class="tarjeta" style="margin-top:32px;background:var(--gradiente-navy);border:none;padding:36px;text-align:center;">
+        <h2 style="color:#fff;font-size:26px;">¿Quieres ver esto en acción?</h2>
+        <p style="color:rgba(255,255,255,.78);margin-top:10px;max-width:480px;margin-left:auto;margin-right:auto;">Explora el demo interactivo de SIGTDE o agenda una sesión con el equipo para ver tu propia institución con datos.</p>
+        <div class="hero-ctas" style="justify-content:center;margin-top:22px;">
+          <a href="demo.html" class="btn btn-primario">Explorar el sistema</a>
+          <a href="index.html#agenda-demo" class="btn btn-secundario" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.25);">Agendar una demo</a>
+        </div>
+      </div>
+
+      <div style="margin-top:48px;">
+        <h3>Otros artículos</h3>
+        <div class="blog-grid" id="otrosArticulos" style="margin-top:18px;grid-template-columns:repeat(3,1fr);"></div>
+      </div>
+    </div>
+  </article>
+</main>
+
+<!-- ================= FOOTER (igual que la landing) ================= -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo">SIGTDE<span class="logo-punto">.</span></a>
+        <p class="texto-sm" style="margin-top:10px;max-width:280px;">Sistema Integral de Gestión del Talento Deportivo Escolar.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Producto</h4>
+          <a href="index.html#como-funciona">Cómo funciona</a>
+          <a href="index.html#planes">Planes</a>
+          <a href="demo.html">Probar el demo</a>
+        </div>
+        <div>
+          <h4>Recursos</h4>
+          <a href="index.html#blog">Blog</a>
+          <a href="index.html#noticias">Noticias</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SIGTDE. Piloto en Pachuca, Hidalgo.</span>
+      <span>PDC / demo con datos simulados. Ningún dato mostrado corresponde a personas reales.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/blog.js"></script>
+</body>
+</html>

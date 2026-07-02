@@ -73,11 +73,6 @@
     animarNumero(document.getElementById('mockValor2'), 88, 1200);
   });
 
-  /* ------------------------------ Blog: "Leer más" (contenido ilustrativo, sin backend) ------------------------------ */
-  document.querySelectorAll('.blog-leer-mas').forEach(boton => {
-    boton.addEventListener('click', () => mostrarToast('Artículo completo disponible próximamente — contenido ilustrativo de la PDC.', 'exito'));
-  });
-
   /* ------------------------------ Noticias: filtro por alcance (contenido simulado) ------------------------------ */
   const NOTICIAS = {
     nacional: [
