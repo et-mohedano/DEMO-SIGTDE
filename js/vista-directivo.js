@@ -96,12 +96,12 @@ window.SIGTDE_VISTAS = window.SIGTDE_VISTAS || {};
               </div>
             </div>
 
-            <div class="col-7 tarjeta no-imprimir">
+            <div class="col-6 tarjeta no-imprimir">
               <h3>Flujo de becas</h3>
               <p class="texto-muted texto-sm" style="margin-top:6px;">El sistema propone por IBD; el comité humano decide.</p>
               <div id="listaBecas" style="margin-top:14px;">${listaBecas(alumnos)}</div>
             </div>
-            <div class="col-5 tarjeta no-imprimir">
+            <div class="col-6 tarjeta no-imprimir">
               <h3>Bitácora de decisiones</h3>
               <div id="bitacoraBecas" style="margin-top:14px;max-height:420px;overflow-y:auto;">${bitacoraHtml()}</div>
             </div>

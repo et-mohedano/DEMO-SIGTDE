@@ -73,6 +73,56 @@
     animarNumero(document.getElementById('mockValor2'), 88, 1200);
   });
 
+  /* ------------------------------ Blog: "Leer más" (contenido ilustrativo, sin backend) ------------------------------ */
+  document.querySelectorAll('.blog-leer-mas').forEach(boton => {
+    boton.addEventListener('click', () => mostrarToast('Artículo completo disponible próximamente — contenido ilustrativo de la PDC.', 'exito'));
+  });
+
+  /* ------------------------------ Noticias: filtro por alcance (contenido simulado) ------------------------------ */
+  const NOTICIAS = {
+    nacional: [
+      { tag: 'Nacional', titulo: 'Programas de talento deportivo escolar crecen 18% en instituciones privadas de México', fecha: '28 jun 2026', resumen: 'Más planteles de educación media superior adoptan baterías de evaluación física estandarizadas.', fuente: 'Redacción Deportiva Escolar (simulado)' },
+      { tag: 'Nacional', titulo: 'Voleibol y basquetbol lideran la preferencia de nuevas ligas estudiantiles', fecha: '21 jun 2026', resumen: 'Encuestas informales señalan un repunte de interés en deportes de conjunto entre 15 y 18 años.', fuente: 'Redacción Deportiva Escolar (simulado)' },
+      { tag: 'Nacional', titulo: 'Especialistas piden estandarizar pruebas físicas en educación media superior', fecha: '10 jun 2026', resumen: 'Piden comparar resultados por edad y sexo en lugar de valores crudos entre escuelas.', fuente: 'Redacción Deportiva Escolar (simulado)' },
+    ],
+    estatal: [
+      { tag: 'Hidalgo', titulo: 'Hidalgo impulsa evaluación física estandarizada en escuelas de nivel medio superior', fecha: '25 jun 2026', resumen: 'Instituciones del estado exploran metodologías con percentiles por edad y sexo.', fuente: 'Gaceta Escolar Hidalgo (simulado)' },
+      { tag: 'Hidalgo', titulo: 'Selectivo estatal de voleibol juvenil se realizará en agosto en Pachuca', fecha: '18 jun 2026', resumen: 'Convocatoria abierta para equipos de nivel medio superior de todo el estado.', fuente: 'Gaceta Escolar Hidalgo (simulado)' },
+      { tag: 'Hidalgo', titulo: 'Instituciones de Hidalgo reportan aumento en captación por programas deportivos', fecha: '05 jun 2026', resumen: 'La diferenciación con ciencia del deporte asoma como argumento de matrícula.', fuente: 'Gaceta Escolar Hidalgo (simulado)' },
+    ],
+    municipal: [
+      { tag: 'Pachuca', titulo: 'Pachuca sede del Selectivo Regional de Basquetbol Sub-17', fecha: '29 jun 2026', resumen: 'El municipio recibirá a equipos de la región centro durante la próxima temporada.', fuente: 'Boletín Municipal de Deporte (simulado)' },
+      { tag: 'Pachuca', titulo: 'Escuela piloto de SIGTDE presenta resultados de su primer semestre de evaluación', fecha: '15 jun 2026', resumen: 'Más de 300 alumnos evaluados con la batería núcleo de 10 pruebas.', fuente: 'Boletín Municipal de Deporte (simulado)' },
+      { tag: 'Pachuca', titulo: 'Municipio de Pachuca amplía horarios de canchas escolares para entrenamientos', fecha: '02 jun 2026', resumen: 'La medida busca facilitar la aplicación de baterías físicas en horario extendido.', fuente: 'Boletín Municipal de Deporte (simulado)' },
+    ],
+  };
+
+  function pintarNoticias(ambito) {
+    const lista = document.getElementById('listaNoticias');
+    lista.innerHTML = NOTICIAS[ambito].map(n => `
+      <article class="tarjeta tarjeta-hover noticia-item">
+        <div class="flex-entre" style="gap:10px;">
+          <span class="badge badge-azul">${n.tag}</span>
+          <span class="texto-xs texto-muted">${n.fecha}</span>
+        </div>
+        <h3 style="font-size:17px;margin-top:12px;">${n.titulo}</h3>
+        <p class="texto-muted texto-sm" style="margin-top:8px;">${n.resumen}</p>
+        <p class="texto-xs texto-muted" style="margin-top:12px;">${n.fuente}</p>
+      </article>
+    `).join('');
+  }
+  const tabsNoticias = document.getElementById('tabsNoticias');
+  if (tabsNoticias) {
+    tabsNoticias.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabsNoticias.querySelectorAll('.tab').forEach(t => t.classList.remove('activo'));
+        tab.classList.add('activo');
+        pintarNoticias(tab.dataset.ambito);
+      });
+    });
+    pintarNoticias('nacional');
+  }
+
   /* ------------------------------ Formulario "Agenda una demo" (simulado, sin backend) ------------------------------ */
   const form = document.getElementById('formDemo');
   const formCampos = document.getElementById('formCampos');

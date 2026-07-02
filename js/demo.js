@@ -105,11 +105,15 @@ const SIGTDE_UI = (function () {
   });
 
   // Entrada directa desde la landing: demo.html?rol=alumno
-  const parametros = new URLSearchParams(window.location.search);
-  const rolInicial = parametros.get('rol');
-  if (rolInicial && secciones[rolInicial]) {
-    mostrarVista(rolInicial);
-  }
+  // Se espera a DOMContentLoaded porque los scripts de cada vista (js/vista-*.js)
+  // se cargan después de este archivo y registran window.SIGTDE_VISTAS al ejecutarse.
+  document.addEventListener('DOMContentLoaded', () => {
+    const parametros = new URLSearchParams(window.location.search);
+    const rolInicial = parametros.get('rol');
+    if (rolInicial && secciones[rolInicial]) {
+      mostrarVista(rolInicial);
+    }
+  });
 
   window.SIGTDE_DEMO = { mostrarVista };
 })();
