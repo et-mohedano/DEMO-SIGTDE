@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGTDE — Demo interactivo</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= BARRA SUPERIOR (aparece tras elegir rol) ================= -->
+<header class="barra-demo oculto" id="barraDemo">
+  <div class="contenedor barra-demo-interior">
+    <a href="index.html" class="logo" style="font-size:18px;">SIGTDE<span class="logo-punto">.</span></a>
+    <nav class="selector-rol-mini" id="selectorRolMini" aria-label="Cambiar de rol">
+      <button type="button" data-rol="alumno">🧑‍🎓 Alumno</button>
+      <button type="button" data-rol="entrenador">🏐 Entrenador</button>
+      <button type="button" data-rol="directivo">🏫 Directivo</button>
+      <button type="button" data-rol="padres">👪 Padres</button>
+    </nav>
+    <div class="flex gap-12" style="align-items:center;">
+      <span class="badge badge-datos-simulados">Datos simulados</span>
+      <a href="index.html" class="btn btn-fantasma btn-sm">← Volver al inicio</a>
+    </div>
+  </div>
+</header>
+
+<div class="aviso-pantalla-chica" id="avisoPantallaChica">
+  <div class="contenedor" style="padding:10px 24px;background:var(--navy);color:#fff;font-size:12.5px;text-align:center;">
+    El demo se disfruta mejor en tablet o desktop. En pantallas muy pequeñas algunas tablas requieren desplazamiento horizontal.
+  </div>
+</div>
+
+<main>
+  <!-- ================= PANTALLA DE ENTRADA ================= -->
+  <section id="pantallaEntrada" class="pantalla-entrada">
+    <div class="contenedor">
+      <span class="etiqueta-seccion">Demo interactivo</span>
+      <h1 class="h2">¿Cómo quieres ver SIGTDE?</h1>
+      <p class="texto-grande" style="margin-top:10px;max-width:560px;">Elige un rol para explorar la plataforma tal como la vería esa persona. Puedes cambiar de rol en cualquier momento desde la barra superior.</p>
+
+      <div class="tarjetas-roles">
+        <button type="button" class="tarjeta-rol" data-rol="alumno">
+          <div class="tarjeta-rol-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+          <h3>Alumno-atleta</h3>
+          <p class="texto-muted texto-sm">Tu perfil, tus índices y tus metas de desarrollo.</p>
+        </button>
+        <button type="button" class="tarjeta-rol" data-rol="entrenador">
+          <div class="tarjeta-rol-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v4M15 3v4M4 8h16M6 8v11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8"/></svg></div>
+          <h3>Entrenador</h3>
+          <p class="texto-muted texto-sm">Captura en cancha, alineaciones y bienestar del equipo.</p>
+        </button>
+        <button type="button" class="tarjeta-rol" data-rol="directivo">
+          <div class="tarjeta-rol-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div>
+          <h3>Directivo</h3>
+          <p class="texto-muted texto-sm">KPIs institucionales, talentos y flujo de becas.</p>
+        </button>
+        <button type="button" class="tarjeta-rol" data-rol="padres">
+          <div class="tarjeta-rol-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 0 0-16 0M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg></div>
+          <h3>Padre / Madre</h3>
+          <p class="texto-muted texto-sm">El progreso de tu hijo/a, en lenguaje llano.</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISTAS POR ROL (contenido generado por JS) ================= -->
+  <section id="vista-alumno" class="vista oculto" aria-label="Vista alumno"></section>
+  <section id="vista-entrenador" class="vista oculto" aria-label="Vista entrenador"></section>
+  <section id="vista-directivo" class="vista oculto" aria-label="Vista directivo"></section>
+  <section id="vista-padres" class="vista oculto" aria-label="Vista padres"></section>
+</main>
+
+<div class="toast-cont" id="toastCont"></div>
+<div class="modal-fondo" id="modalFondo">
+  <div class="modal" id="modalContenido" role="dialog" aria-modal="true"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/vista-alumno.js"></script>
+<script src="js/vista-entrenador.js"></script>
+<script src="js/vista-directivo.js"></script>
+<script src="js/vista-padres.js"></script>
+</body>
+</html>

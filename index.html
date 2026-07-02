@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGTDE — El talento de tus alumnos, medido con ciencia</title>
+<meta name="description" content="SIGTDE: sistema integral de gestión del talento deportivo escolar. Identifica, desarrolla y da seguimiento al talento en basquetbol, voleibol y futbol.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="contenedor navbar-interior">
+    <a href="index.html" class="logo">SIGTDE<span class="logo-punto">.</span></a>
+    <nav class="navbar-links links-nav" aria-label="Navegación principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="demo.html" class="btn btn-primario btn-sm">Probar el demo</a>
+    <button class="navbar-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMovil">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="navMovil" class="navbar-movil" aria-label="Navegación móvil">
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#para-quien">Para quién</a>
+    <a href="#planes">Planes</a>
+    <a href="#contacto">Contacto</a>
+    <a href="demo.html" class="btn btn-primario btn-sm btn-block" style="margin-top:8px;">Probar el demo</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="contenedor hero-grid">
+      <div>
+        <h1>El talento de tus alumnos, medido con ciencia</h1>
+        <p class="hero-sub">Identifica, desarrolla y da seguimiento al talento deportivo de tu institución con datos, no con corazonadas.</p>
+        <div class="hero-ctas">
+          <a href="demo.html" class="btn btn-primario">Explorar el sistema</a>
+          <a href="#agenda-demo" class="btn btn-secundario">Agendar una demo</a>
+        </div>
+      </div>
+
+      <div class="mock-dashboard" aria-hidden="true">
+        <div class="mock-dashboard-top">
+          <strong style="color:#fff;font-size:14px;">Perfil deportivo · Diego H.</strong>
+          <span class="mock-chip">Voleibol · 90</span>
+        </div>
+        <svg viewBox="0 0 220 190" width="100%" height="190" role="presentation">
+          <polygon points="110,30 175,72 152,150 68,150 45,72" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+          <polygon points="110,58 152,86 137,132 83,132 68,86" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+          <polygon id="mockRadarPoly" points="110,95 110,95 110,95 110,95 110,95" fill="#6B35D9" fill-opacity=".35" stroke="#9B7CF0" stroke-width="2"/>
+        </svg>
+        <div class="mock-grid">
+          <div class="mock-card"><div class="valor" id="mockValor1">0</div><div class="etiqueta">IPV — Voleibol</div></div>
+          <div class="mock-card"><div class="valor" id="mockValor2">0</div><div class="etiqueta">IPD — Potencial</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CIFRAS ANIMADAS ================= -->
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="cifras">
+        <div data-aparecer>
+          <div class="cifra-numero" data-cifra="10">0</div>
+          <div class="cifra-etiqueta">pruebas físicas estandarizadas</div>
+        </div>
+        <div data-aparecer>
+          <div class="cifra-numero"><span data-cifra="3">0</span>/<span data-cifra="14">0</span></div>
+          <div class="cifra-etiqueta">deportes, 14 posiciones</div>
+        </div>
+        <div data-aparecer>
+          <div class="cifra-numero">0<span data-cifra="100">0</span></div>
+          <div class="cifra-etiqueta">índices comparables por edad y sexo</div>
+        </div>
+        <div data-aparecer>
+          <div class="cifra-numero" data-cifra="2">0</div>
+          <div class="cifra-etiqueta">sesiones de clase por evaluación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CÓMO FUNCIONA ================= -->
+  <section class="seccion seccion-alt" id="como-funciona">
+    <div class="contenedor">
+      <span class="etiqueta-seccion">Cómo funciona</span>
+      <h2>De la cancha a la decisión, en cuatro pasos</h2>
+      <div class="pasos" style="margin-top:40px;">
+        <div class="paso" data-aparecer>
+          <div class="paso-num">1</div>
+          <h3>Evalúa</h3>
+          <p class="texto-muted" style="margin-top:8px;">Batería núcleo de 10 pruebas, aplicada en cancha, sin necesidad de internet.</p>
+        </div>
+        <div class="paso" data-aparecer>
+          <div class="paso-num">2</div>
+          <h3>Procesa</h3>
+          <p class="texto-muted" style="margin-top:8px;">Cada resultado se convierte a percentil contra la norma de edad y sexo.</p>
+        </div>
+        <div class="paso" data-aparecer>
+          <div class="paso-num">3</div>
+          <h3>Decide</h3>
+          <p class="texto-muted" style="margin-top:8px;">Selección de equipos, posiciones y becas deportivas respaldadas con evidencia.</p>
+        </div>
+        <div class="paso" data-aparecer>
+          <div class="paso-num">4</div>
+          <h3>Da seguimiento</h3>
+          <p class="texto-muted" style="margin-top:8px;">Evolución de cada alumno, semestre a semestre, sin perder el hilo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CUATRO MIRADAS ================= -->
+  <section class="seccion" id="para-quien">
+    <div class="contenedor">
+      <span class="etiqueta-seccion">Para quién</span>
+      <h2>Un sistema, cuatro miradas</h2>
+      <p class="texto-grande" style="margin-top:12px;max-width:640px;">Cada perfil ve exactamente lo que necesita, ni más ni menos.</p>
+      <div class="miradas" style="margin-top:40px;">
+        <a href="demo.html?rol=alumno" class="tarjeta tarjeta-hover" data-aparecer>
+          <div class="mirada-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+          <h3>Alumno</h3>
+          <p class="texto-muted texto-sm" style="margin-top:8px;">Sabe qué tan competitivo puede ser, en qué deporte y posición, y qué metas alcanzar.</p>
+          <span class="badge badge-azul" style="margin-top:14px;">Ver vista →</span>
+        </a>
+        <a href="demo.html?rol=entrenador" class="tarjeta tarjeta-hover" data-aparecer>
+          <div class="mirada-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v4M15 3v4M4 8h16M6 8v11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8"/></svg></div>
+          <h3>Entrenador</h3>
+          <p class="texto-muted texto-sm" style="margin-top:8px;">Selecciona equipos con evidencia, captura en cancha sin internet y recibe alertas de bienestar.</p>
+          <span class="badge badge-azul" style="margin-top:14px;">Ver vista →</span>
+        </a>
+        <a href="demo.html?rol=directivo" class="tarjeta tarjeta-hover" data-aparecer>
+          <div class="mirada-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div>
+          <h3>Directivo</h3>
+          <p class="texto-muted texto-sm" style="margin-top:8px;">Diferenciación institucional, becas defendibles con datos y captación de matrícula.</p>
+          <span class="badge badge-azul" style="margin-top:14px;">Ver vista →</span>
+        </a>
+        <a href="demo.html?rol=padres" class="tarjeta tarjeta-hover" data-aparecer>
+          <div class="mirada-icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21a8 8 0 0 0-16 0M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg></div>
+          <h3>Padres</h3>
+          <p class="texto-muted texto-sm" style="margin-top:8px;">Visibilidad del desarrollo de sus hijos, con datos seguros y consentimiento claro.</p>
+          <span class="badge badge-azul" style="margin-top:14px;">Ver vista →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONFIANZA / PRIVACIDAD ================= -->
+  <section class="seccion seccion-alt">
+    <div class="contenedor">
+      <span class="etiqueta-seccion">Confianza</span>
+      <h2>Privacidad y transparencia, no letra chica</h2>
+      <div class="confianza" style="margin-top:40px;">
+        <div class="confianza-item" data-aparecer>
+          <div class="confianza-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div><h3 style="font-size:17px;">Consentimiento de tutores</h3><p class="texto-muted texto-sm" style="margin-top:6px;">Para alumnos menores de edad, siempre con aviso de privacidad vigente.</p></div>
+        </div>
+        <div class="confianza-item" data-aparecer>
+          <div class="confianza-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div><h3 style="font-size:17px;">Cero comparación entre pares</h3><p class="texto-muted texto-sm" style="margin-top:6px;">Los alumnos nunca ven datos de otros alumnos.</p></div>
+        </div>
+        <div class="confianza-item" data-aparecer>
+          <div class="confianza-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div><h3 style="font-size:17px;">Algoritmo auditable</h3><p class="texto-muted texto-sm" style="margin-top:6px;">Todo índice se puede desglosar: qué pruebas lo componen y con qué peso.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLANES ================= -->
+  <section class="seccion" id="planes">
+    <div class="contenedor">
+      <span class="etiqueta-seccion">Planes</span>
+      <h2>Un plan para cada tamaño de institución</h2>
+      <p class="texto-grande" style="margin-top:12px;">Referenciales — cotización final según necesidades. Sin checkout en esta demo.</p>
+      <div class="planes" style="margin-top:40px;">
+        <div class="tarjeta plan-tarjeta" data-aparecer>
+          <h3>Básico</h3>
+          <p class="plan-precio-nota">Hasta 500 alumnos</p>
+          <ul class="plan-lista">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Batería núcleo de 10 pruebas</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Índices IPF / IPB / IPV</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Panel de entrenador</li>
+          </ul>
+          <a href="#agenda-demo" class="btn btn-secundario btn-block">Agendar demo</a>
+        </div>
+        <div class="tarjeta plan-tarjeta destacado" data-aparecer>
+          <span class="badge badge-violeta" style="position:absolute;top:-12px;left:24px;">Más elegido</span>
+          <h3>Institucional</h3>
+          <p class="plan-precio-nota">501 a 1,500 alumnos</p>
+          <ul class="plan-lista">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Todo lo del plan Básico</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Módulo de bienestar</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Portal de padres</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Flujo de becas con bitácora</li>
+          </ul>
+          <a href="#agenda-demo" class="btn btn-primario btn-block">Agendar demo</a>
+        </div>
+        <div class="tarjeta plan-tarjeta" data-aparecer>
+          <h3>Campus / Red</h3>
+          <p class="plan-precio-nota">Multi-plantel · cotización</p>
+          <ul class="plan-lista">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Todo lo del plan Institucional</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Comparativos entre planteles</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Soporte y onboarding dedicado</li>
+          </ul>
+          <a href="#agenda-demo" class="btn btn-secundario btn-block">Cotizar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMULARIO ================= -->
+  <section class="seccion seccion-alt" id="agenda-demo" style="scroll-margin-top:90px;">
+    <div class="contenedor" style="max-width:760px;">
+      <span class="etiqueta-seccion">Contacto</span>
+      <h2 id="contacto">Agenda una demo con el equipo</h2>
+      <p class="texto-grande" style="margin-top:12px;">Sin compromiso. Te mostramos el sistema con datos de tu institución (o simulados, como aquí).</p>
+
+      <div class="form-demo-wrap" style="margin-top:32px;">
+        <form id="formDemo" novalidate>
+          <div id="formCampos">
+            <div class="campo-fila">
+              <div class="campo" data-campo="nombre">
+                <label for="fNombre">Nombre completo <span class="req">*</span></label>
+                <input type="text" id="fNombre" name="nombre" autocomplete="name">
+                <span class="error-msg">Escribe tu nombre completo.</span>
+              </div>
+              <div class="campo" data-campo="institucion">
+                <label for="fInstitucion">Institución <span class="req">*</span></label>
+                <input type="text" id="fInstitucion" name="institucion" autocomplete="organization">
+                <span class="error-msg">Indica el nombre de tu institución.</span>
+              </div>
+            </div>
+            <div class="campo-fila">
+              <div class="campo" data-campo="cargo">
+                <label for="fCargo">Cargo <span class="req">*</span></label>
+                <select id="fCargo" name="cargo">
+                  <option value="">Selecciona una opción</option>
+                  <option>Director/a</option>
+                  <option>Coordinador/a deportivo</option>
+                  <option>Docente de EF</option>
+                  <option>Otro</option>
+                </select>
+                <span class="error-msg">Selecciona tu cargo.</span>
+              </div>
+              <div class="campo" data-campo="ubicacion">
+                <label for="fUbicacion">Municipio / Estado <span class="req">*</span></label>
+                <input type="text" id="fUbicacion" name="ubicacion" placeholder="Pachuca, Hidalgo">
+                <span class="error-msg">Indica municipio y estado.</span>
+              </div>
+            </div>
+            <div class="campo-fila">
+              <div class="campo" data-campo="correo">
+                <label for="fCorreo">Correo <span class="req">*</span></label>
+                <input type="email" id="fCorreo" name="correo" autocomplete="email">
+                <span class="error-msg">Escribe un correo válido.</span>
+              </div>
+              <div class="campo" data-campo="telefono">
+                <label for="fTelefono">Teléfono <span class="req">*</span></label>
+                <input type="tel" id="fTelefono" name="telefono" placeholder="10 dígitos" autocomplete="tel">
+                <span class="error-msg">Escribe un teléfono a 10 dígitos.</span>
+              </div>
+            </div>
+            <div class="campo" data-campo="numAlumnos">
+              <label for="fNumAlumnos">Número aproximado de alumnos <span class="req">*</span></label>
+              <input type="number" id="fNumAlumnos" name="numAlumnos" min="1" placeholder="Ej. 450">
+              <span class="error-msg">Indica un número mayor a 0.</span>
+            </div>
+            <div class="campo" data-campo="mensaje">
+              <label for="fMensaje">Mensaje (opcional)</label>
+              <textarea id="fMensaje" name="mensaje" placeholder="Cuéntanos qué te gustaría ver en la demo..."></textarea>
+            </div>
+
+            <p class="texto-xs texto-muted">Al enviar aceptas que te contactemos para agendar la demo. Esta es una Prueba de Concepto: tus datos no se envían a ningún servidor, solo se muestran en la consola del navegador.</p>
+            <button type="submit" class="btn btn-primario btn-block" style="margin-top:16px;">Enviar solicitud</button>
+          </div>
+
+          <div id="formExito" class="form-exito oculto" role="status">
+            <div class="icono-exito"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>¡Listo! Te contactaremos en menos de 24 h</h3>
+            <p class="texto-muted" style="margin-top:8px;">Revisa tu correo — ahí llegará la confirmación de tu demo con el equipo de SIGTDE.</p>
+            <button type="button" class="btn btn-secundario" id="btnOtroEnvio" style="margin-top:20px;">Enviar otra solicitud</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo">SIGTDE<span class="logo-punto">.</span></a>
+        <p class="texto-sm" style="margin-top:10px;max-width:280px;">Sistema Integral de Gestión del Talento Deportivo Escolar.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Producto</h4>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#planes">Planes</a>
+          <a href="demo.html">Probar el demo</a>
+        </div>
+        <div>
+          <h4>Compañía</h4>
+          <a href="#contacto">Contacto</a>
+          <a href="#agenda-demo">Agendar demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SIGTDE. Piloto en Pachuca, Hidalgo.</span>
+      <span>PDC / demo con datos simulados. Ningún dato mostrado corresponde a personas reales.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-cont" id="toastCont"></div>
+
+<script src="js/landing.js"></script>
+</body>
+</html>
